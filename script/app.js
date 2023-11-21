@@ -2,7 +2,7 @@ const area = document.getElementById('game-area')
 const cell = document.getElementsByClassName('cell')
 const currentPlayer = document.getElementById('currentPlayer')
 
-const player = 'x'
+let player = 'x'
 
 let stat = {
     'x': 0,
