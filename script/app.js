@@ -1,6 +1,6 @@
 const area = document.getElementById('game-area')
 const cell = document.getElementsByClassName('cell')
-const currentPlayer = document.getElementById('currentPlayer')
+let currentPlayer = document.getElementById('currentPlayer')
 
 let player = 'x'
 
@@ -30,11 +30,11 @@ for(let i = 0; i <=cell.length; i++){
 }
 
 function cellClick() {
-
     let data = []
 
     if(!this.innerHTML){
         this.innerHTML = player
+        this.style.color = player === 'x' ? 'red' : 'blue';
     } else{
         alert('Cell is occupied')
         return
@@ -61,6 +61,8 @@ function cellClick() {
             restart('The draw !!!')
         }
     }
+
+    
     
     player = player == 'x' ? 'o' : 'x'
     currentPlayer.innerHTML = player.toUpperCase()

@@ -1,48 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    background-color: #DCFFD0;
+    font-family: 'Agbalumo', sans-serif;
 }
 
 .wrapper{
+    height: 100%;
     display: flex;
-    margin: 100px 50px 50px 50px;
+    align-items: center;
+}
+
+.area{
+    margin: 0 auto;
 }
 
 #game-area{
-    width: 156px;
-    border: 1px solid #000;
+    text-align: center;
+    width: 315px;
+    /* border: 1px solid #000; */
     margin: 0 auto;
-    font-size: 0;
 }
 
 .cell{
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
     text-align: center;
     display: inline-block;
-    font-size: 26px;
-    border: 1px solid #000;
+    font-size: 46px;
+    border: 2px solid #000;
     cursor: pointer;
     vertical-align: middle;
-    transition: background .1s;
+    transition: background .2s;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .cell:hover{
-    background-color: #f1f1f1;
+    background-color: #C3FFAF;
 }
 
-.currentPlayer{
-    width: 140px;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
+.current-player{
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 15px;
 }
+
 .stat{
     display: flex;
+    margin-right: 50px;
     align-items: center;
-    font-size: 18px;
+    font-size: 24px;
 }
 
 .stat table{
